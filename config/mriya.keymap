@@ -349,6 +349,27 @@
 };
 
 / {
+    behaviors {
+        ht_ye: ht_ye {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_YE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+        };
+
+        td_zh: td_zh {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_ZH";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SEMI>, <&kp LBKT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -373,10 +394,10 @@
 */
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R             &kp T                              &kp Y          &kp U      &kp I      &kp O    &kp P          &kp ESC
-&kp LCTRL       &kp A  &kp S  &kp D  &kp F             &kp G                              &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V             &kp B                              &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_ALT
-                                     &kp LEFT_COMMAND  &lt 1 SPACE  &kp ENTER  &kp SPACE  &kp BACKSPACE  &lt 2 DEL
+&kp TAB         &kp Q  &kp W  &kp E  &kp R             &ht_ye GRAVE T                        &kp Y          &kp U          &kp I      &kp O    &kp P     &kp ESC
+&kp LCTRL       &kp A  &kp S  &kp D  &kp F             &kp G                                 &kp H          &kp J          &kp K      &kp L    &td_zh    &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V             &kp B                                 &kp N          &ht_ye RBKT M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                                     &kp LEFT_COMMAND  &lt 1 SPACE     &kp ENTER  &kp SPACE  &kp BACKSPACE  &lt 2 DEL
             >;
         };
 
