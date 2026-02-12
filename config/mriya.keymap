@@ -394,9 +394,9 @@
 */
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R             &ht_ye GRAVE T                        &kp Y          &kp U          &kp I      &kp O    &kp P     &kp ESC
-&kp LCTRL       &kp A  &kp S  &kp D  &kp F             &kp G                                 &kp H          &kp J          &kp K      &kp L    &td_zh    &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V             &kp B                                 &kp N          &ht_ye RBKT M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+&kp TAB         &kp Q  &kp W  &kp E  &kp R             &ht_ye GRAVE T                        &kp Y          &kp U          &kp I      &kp O    &kp P             &kp ESC
+&kp LCTRL       &kp A  &kp S  &kp D  &kp F             &kp G                                 &kp H          &kp J          &kp K      &kp L    &ht_ye LBKT SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V             &kp B                                 &kp N          &ht_ye RBKT M  &kp COMMA  &kp DOT  &kp FSLH          &kp RIGHT_ALT
                                      &kp LEFT_COMMAND  &lt 1 SPACE     &kp ENTER  &kp SPACE  &kp BACKSPACE  &lt 2 DEL
             >;
         };
